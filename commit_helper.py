@@ -93,7 +93,7 @@ def determine_commit_type(message):
     """Menentukan type commit berdasarkan kata kunci."""
     message = message.lower()
     if any(word in message for word in ["tambah", "buat", "menambahkan"]):
-        return "➕ feat"
+        return "✨ feat"
     elif any(word in message for word in ["perbaiki", "memperbaiki", "fix", "bug"]):
         return "✅ fix"
     elif any(word in message for word in ["dokumentasi", "readme", "docs"]):
