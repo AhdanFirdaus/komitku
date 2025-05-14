@@ -100,6 +100,26 @@ Konfirmasi commit? (y/n): y
 [Success] Commit berhasil!
 ```
 
+## Shortcut CLI ⚡
+
+Agar lebih praktis, kamu bisa membuat alias untuk menjalankan `komitku` langsung dari mana saja di terminal.
+
+1. **Tambahkan Alias**
+Buka file konfigurasi shell kamu (contoh: `~/.zshrc` atau `~/.bashrc`) lalu tambahkan baris berikut:
+```sh
+alias cm="python3 /home/dadan/komitku/commit_helper.py"
+```
+
+2. **Terapkan Alias**
+Setelah menambahkan alias, jalankan:
+```sh
+source ~/.zshrc
+```
+Sekarang kamu bisa langsung menggunakan cm di terminal untuk menjalankan komitku:
+```sh
+cm
+```
+
 ## Kontribusi 🤝
 
 Ingin membuat komitku lebih keren? Fork repo ini, buat perubahan, dan kirim pull request!
