@@ -106,7 +106,7 @@ Ingin membuat komitku lebih keren? Fork repo ini, buat perubahan, dan kirim pull
 
 ## Lisensi 📜
 
-MIT License - gunakan, modifikasi, dan bagikan sesukamu!
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ## Kontak 📬
 
