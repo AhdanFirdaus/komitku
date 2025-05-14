@@ -40,7 +40,7 @@ pip install deep-translator inquirer
 
 3. **Clone repository ini**:
 ```sh
-git clone https://github.com/<your-username>/komitku.git
+git clone https://github.com/AhdanFirdaus/komitku.git
 cd komitku
 ```
 
