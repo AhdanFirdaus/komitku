@@ -35,7 +35,7 @@ def select_files(files):
             "files",
             message="Pilih file untuk di-add (tekan Enter untuk All)",
             choices=choices,
-            default=["All (.)"]  # Default ke All
+            # Tanpa default untuk mencegah All (.) otomatis terpilih
         )
     ]
     try:
@@ -44,6 +44,7 @@ def select_files(files):
             print("Tidak ada file yang dipilih, menggunakan default: All")
             return "."
         if "All (.)" in answers["files"]:
+            print("Memilih semua file karena 'All (.)' dipilih")
             return "."
         return answers["files"]
     except KeyboardInterrupt:
@@ -81,7 +82,7 @@ def undo_staging(staged_files):
         else:
             print("Berhasil membatalkan staging semua file.")
     else:
-        for file in staged_files:
+        for file in files:
             stdout, stderr = run_command(f'git restore --staged "{file}"')
             if stderr:
                 print(f"Error saat membatalkan staging {file}: {stderr}")
@@ -175,10 +176,12 @@ def main():
 
         # Tentukan type
         commit_type = determine_commit_type(commit_message_id)
+        print(f"Tipe commit: {commit_type}")
         
         # Tentukan scope
         if commit_type == "config":
-            scope = ""
+            scope = "config"
+            print("Menggunakan scope default: config")
         else:
             scope = input("Masukkan scope (contoh: ui, auth, api): ").strip()
             if not scope:
